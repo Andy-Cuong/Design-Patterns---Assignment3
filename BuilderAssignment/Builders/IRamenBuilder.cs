@@ -12,6 +12,10 @@ namespace BuilderAssignment.Builders
         // - Setting noodles
         // - Adding toppings
         // - Adding Extras
+        public void SelectBroth();
+        public void SelectNoodle();
+        public void AddTopping();
+        public void AddExtra();
 
         /// <summary>
         /// Returns the value of build RamenBowl

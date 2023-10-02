@@ -12,12 +12,21 @@ namespace BuilderAssignment.Models
     /// </summary>
     public class RamenBowl
     {
+        
+
         //TODO#1: Add attributes for each enum in IngredientEnums.cs file
+        public BrothType Broth = default(BrothType);
+        public NoodleType Noodle = default(NoodleType);
+        public List<Topping> Topping = new List<Topping>();
+        public List<Extra> Extra = new List<Extra>();
 
         //TODO#2: Return description of finished bowl of ramen
-        public static string FinishedBowlOfRamen()
+        public string FinishedBowlOfRamen()
         {
-            return "";
+            // Count before returning
+            return $"Your ramen bowl includes {Broth} broth, {Noodle} noodle, with " +
+                (Topping.Count > 0 ? String.Join(", ", Topping) + " topping" : "no topping") +
+                (Extra.Count > 0 ? " and extra " + String.Join(", ", Extra) : " and no extra");
         }
     }
 }
